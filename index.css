@@ -9985,53 +9985,53 @@ span.ant-radio + * {
   padding-right: 20px;
   font-weight: 500;
 }
-.tradeHistory___3mWpg {
+.tradeHistory___3tC4g {
   height: 100%;
   background: white;
 
 }
 
-.historyTable___1TMyT {
+.historyTable___RXeJ5 {
   height: calc(100% - 60px);
   overflow: scroll;
 }
 
-.tradeRow___xC9Wv {
+.tradeRow___EpMbP {
   display: inline-block;
   height: 20px;
   width: 100%;
 
 }
 
-.tradePrice___2DP7B {
+.tradePrice___3UOBe {
   display: inline-block;
   width: 30%;
   text-align: center;
 }
 
-.tradeTime___adTnw {
+.tradeTime___1aKqC {
   display: inline-block;
   width: 30%;
   text-align: center;
 }
 
-.tradeSize___2RIsX {
+.tradeSize___2PEMH {
   display: inline-block;
   width: 30%;
   text-align: center;
 
 }
 
-.tradeVolume___dZ29K {
+.tradeVolume___2dQgc {
   display: inline-block;
   width: 10%;
 }
-.zoomBar___6I3cq {
+.zoomBar___1Vzon {
   padding-top: 10px;
   text-align: center;
 }
 
-.currentPrice___1AwA2 {
+.currentPrice___2pMlf {
   display: inline-block;
   margin: 0 10px;
 }

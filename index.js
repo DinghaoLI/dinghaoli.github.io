@@ -39958,8 +39958,8 @@ var levelDefinition = exports.levelDefinition = [
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dva__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dva___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_dva__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_index_scss__ = __webpack_require__(442);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_index_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_css__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__index_css__);
 
  // 1. Initialize
 
@@ -58606,9 +58606,9 @@ var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
 var moment = __webpack_require__(1);
 var moment_default = /*#__PURE__*/__webpack_require__.n(moment);
 
-// EXTERNAL MODULE: ./src/styles/tradeHistory.scss
-var tradeHistory = __webpack_require__(539);
-var tradeHistory_default = /*#__PURE__*/__webpack_require__.n(tradeHistory);
+// EXTERNAL MODULE: ./src/styles/TradeHistory.scss
+var styles_TradeHistory = __webpack_require__(539);
+var TradeHistory_default = /*#__PURE__*/__webpack_require__.n(styles_TradeHistory);
 
 // CONCATENATED MODULE: ./node_modules/sockette/dist/sockette.es.js
 function sockette_es_n(){}/* harmony default export */ var sockette_es = (function(o,e){var t,c,i,r={},s=this,u=(e=e||{}).timeout||1e3,f=e.maxAttempts||Infinity;return r.onmessage=e.onmessage||sockette_es_n,r.onclose=function(o){1e3!==o.code&&1005!==o.code&&s.reconnect(o),(e.onclose||sockette_es_n)(o)},r.onerror=function(o){o&&"ECONNREFUSED"===o.code?s.reconnect(o):(e.onerror||sockette_es_n)(o)},r.onopen=function(o){i=0,(e.onopen||sockette_es_n)(o)},s.open=function(){for(t in c=new WebSocket(o,e.protocols),r)c[t]=r[t]},s.reconnect=function(o){i++<f?setTimeout(function(t){(e.onreconnect||sockette_es_n)(o),s.open()},u):(e.onmaximum||sockette_es_n)(o)},s.json=function(n){c.send(JSON.stringify(n))},s.send=function(n){c.send(n)},s.close=function(n,o){c.close(n,o)},s.open(),s});;
@@ -58798,7 +58798,7 @@ function (_React$Component) {
       this.getHistoryTrades();
       this.timer = setInterval(function () {
         _this2.update();
-      }, 500);
+      }, 1000);
     }
   }, {
     key: "componentWillUnmount",
@@ -58813,35 +58813,35 @@ function (_React$Component) {
           fullVolume = _state.fullVolume;
       var animateTrade = this.animateTrade;
       return react_default.a.createElement("div", {
-        className: tradeHistory_default.a.tradeHistory
+        className: TradeHistory_default.a.tradeHistory
       }, react_default.a.createElement(components_SubHeaders, {
         title: "TRADE HISTORY"
       }), react_default.a.createElement("div", {
-        className: tradeHistory_default.a.tradeRow,
+        className: TradeHistory_default.a.tradeRow,
         style: {
           borderBottom: '1px solid #ececec',
           fontWeight: 700
         }
       }, react_default.a.createElement("div", {
-        className: tradeHistory_default.a.tradeVolume
+        className: TradeHistory_default.a.tradeVolume
       }, "\xA0"), react_default.a.createElement("div", {
-        className: tradeHistory_default.a.tradeSize
+        className: TradeHistory_default.a.tradeSize
       }, " Trade size "), react_default.a.createElement("div", {
-        className: tradeHistory_default.a.tradePrice
+        className: TradeHistory_default.a.tradePrice
       }, " Price(USD) "), react_default.a.createElement("div", {
-        className: tradeHistory_default.a.tradeTime
+        className: TradeHistory_default.a.tradeTime
       }, " Time ")), react_default.a.createElement("div", {
-        className: tradeHistory_default.a.historyTable
+        className: TradeHistory_default.a.historyTable
       }, historyTrades && historyTrades.map(function (trade, index) {
-        animateTrade(index, trade.color);
+        // animateTrade(index,trade.color);
         var date = new Date(trade.time);
         return react_default.a.createElement("div", {
           key: index,
           ref: "tradeRow",
           id: "tradeRow" + index,
-          className: tradeHistory_default.a.tradeRow
+          className: TradeHistory_default.a.tradeRow
         }, react_default.a.createElement("div", {
-          className: tradeHistory_default.a.tradeVolume
+          className: TradeHistory_default.a.tradeVolume
         }, react_default.a.createElement("div", {
           style: {
             backgroundColor: trade.color,
@@ -58850,9 +58850,9 @@ function (_React$Component) {
             width: Number(trade.size) / fullVolume > 100 ? 100 + '%' : Number(trade.size) / fullVolume + '%'
           }
         }, "\xA0")), react_default.a.createElement("div", {
-          className: tradeHistory_default.a.tradeSize
+          className: TradeHistory_default.a.tradeSize
         }, " ", trade.size, " "), react_default.a.createElement("div", {
-          className: tradeHistory_default.a.tradePrice,
+          className: TradeHistory_default.a.tradePrice,
           style: {
             color: trade.color
           }
@@ -58861,7 +58861,7 @@ function (_React$Component) {
         }) : react_default.a.createElement(es_icon, {
           type: "arrow-down"
         }), " "), react_default.a.createElement("div", {
-          className: tradeHistory_default.a.tradeTime,
+          className: TradeHistory_default.a.tradeTime,
           style: {
             color: 'darkgray'
           }
@@ -64957,24 +64957,6 @@ DepthChart_DepthChart.defaultProps = {
 };
 DepthChart_DepthChart = Object(helper["fitWidth"])(DepthChart_DepthChart);
 /* harmony default export */ var tradeComponents_DepthChart = (DepthChart_DepthChart);
-// CONCATENATED MODULE: ./src/components/tradeComponents/Fills.js
-
-
-var Fills_Fills = function Fills() {
-  return react_default.a.createElement("div", null, "Hey Cinance");
-};
-
-Fills_Fills.propTypes = {};
-/* harmony default export */ var tradeComponents_Fills = (Fills_Fills);
-// CONCATENATED MODULE: ./src/components/tradeComponents/OpenOrders.js
-
-
-var OpenOrders_OpenOrders = function OpenOrders() {
-  return react_default.a.createElement("div", null, "Hey Cinance");
-};
-
-OpenOrders_OpenOrders.propTypes = {};
-/* harmony default export */ var tradeComponents_OpenOrders = (OpenOrders_OpenOrders);
 // EXTERNAL MODULE: ./node_modules/react-stockcharts/lib/coordinates/index.js
 var lib_coordinates = __webpack_require__(584);
 var coordinates_default = /*#__PURE__*/__webpack_require__.n(lib_coordinates);
@@ -75372,9 +75354,9 @@ PriceChart_PriceChart = Object(helper["fitWidth"])(PriceChart_PriceChart);
 var assertThisInitialized = __webpack_require__(197);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
 
-// EXTERNAL MODULE: ./src/styles/dpethChartWrapper.scss
-var dpethChartWrapper = __webpack_require__(628);
-var dpethChartWrapper_default = /*#__PURE__*/__webpack_require__.n(dpethChartWrapper);
+// EXTERNAL MODULE: ./src/styles/DpethChartWrapper.scss
+var DpethChartWrapper = __webpack_require__(628);
+var DpethChartWrapper_default = /*#__PURE__*/__webpack_require__.n(DpethChartWrapper);
 
 // CONCATENATED MODULE: ./src/components/tradeComponents/DepthChartWrapper.js
 
@@ -75699,7 +75681,7 @@ function (_React$Component) {
           ref: "chart",
           id: "chart"
         }, isDepthChart && react_default.a.createElement("div", {
-          className: dpethChartWrapper_default.a.zoomBar
+          className: DpethChartWrapper_default.a.zoomBar
         }, dataPercentage < 75 ? react_default.a.createElement(es_button, {
           shape: "circle",
           icon: "plus",
@@ -75710,7 +75692,7 @@ function (_React$Component) {
           disabled: true,
           onClick: addData
         }), react_default.a.createElement("div", {
-          className: dpethChartWrapper_default.a.currentPrice
+          className: DpethChartWrapper_default.a.currentPrice
         }, currentPrice.toFixed(3)), dataPercentage > 0.5 ? react_default.a.createElement(es_button, {
           shape: "circle",
           icon: "minus",
@@ -76337,8 +76319,6 @@ Balance_Balance.defaultProps = {};
 
 
 
-
-
 // CONCATENATED MODULE: ./src/routes/IndexPage.js
 
 
@@ -76373,7 +76353,7 @@ IndexPage.propTypes = {};
 
 var TradingPage_TradingPage = function TradingPage(_ref) {
   var dispatch = _ref.dispatch;
-  return react_default.a.createElement("div", null);
+  return react_default.a.createElement("div", null, react_default.a.createElement("h2", null, "Super Trading Page"));
 }; // export default Products;
 
 
@@ -82154,7 +82134,7 @@ webpackContext.id = 538;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"tradeHistory":"tradeHistory___3mWpg","historyTable":"historyTable___1TMyT","tradeRow":"tradeRow___xC9Wv","tradePrice":"tradePrice___2DP7B","tradeTime":"tradeTime___adTnw","tradeSize":"tradeSize___2RIsX","tradeVolume":"tradeVolume___dZ29K"};
+module.exports = {"tradeHistory":"tradeHistory___3tC4g","historyTable":"historyTable___RXeJ5","tradeRow":"tradeRow___EpMbP","tradePrice":"tradePrice___3UOBe","tradeTime":"tradeTime___1aKqC","tradeSize":"tradeSize___2PEMH","tradeVolume":"tradeVolume___2dQgc"};
 
 /***/ }),
 /* 540 */
@@ -94797,7 +94777,7 @@ exports.default = discontinuousTimeScaleProviderBuilder();
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"zoomBar":"zoomBar___6I3cq","currentPrice":"currentPrice___1AwA2"};
+module.exports = {"zoomBar":"zoomBar___1Vzon","currentPrice":"currentPrice___2pMlf"};
 
 /***/ }),
 /* 629 */
