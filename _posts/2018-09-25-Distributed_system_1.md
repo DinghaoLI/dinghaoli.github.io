@@ -8,7 +8,6 @@ tags: DistributedSystems
 ---
 
 
-
 ## 第一章 分布式系统的特征
 
 ### 1.分布式系统特征：
