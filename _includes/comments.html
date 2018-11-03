@@ -1,16 +1,17 @@
 <section class="post-comments">
-    <div id="gitmentContainer"></div>
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    <script>
-        var gitment = new Gitment({
-            owner: 'DinghaoLI',
-            repo: 'dinghaoli.github.io',
-            oauth: {
-                client_id: 'd0fd720b79a0afbd8dd4',
+
+    <div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'DinghaoLI',
+ repo: 'DinghaoLI/dinghaoli.github.io',
+  oauth: {
+    client_id: 'd0fd720b79a0afbd8dd4',
                 client_secret: '7ce47dfc18ed0b282a1d642b7fcaf747f1d4468d',
-            },
-        });
-    gitment.render('gitmentContainer');
-    </script>
+  },
+})
+gitment.render('container')
+</script>
 </section>
